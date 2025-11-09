@@ -1,0 +1,24 @@
+# -------------------------------------------------------------
+# requirements.txt
+# CN Assignment 1 - Chat Application
+# Author: Muhammad Hammad Butt (CMS 501399)
+# Repository: CN-Assignment1-MuhammadHammadButt-501399
+# -------------------------------------------------------------
+
+# Python Version
+python==3.10.0
+# (You can use 3.8+ safely; sockets & threading work on all versions ≥3.6)
+
+# No external dependencies are required.
+# All modules used are part of Python’s standard library:
+#   - socket (for TCP communication)
+#   - threading (for concurrent clients)
+#   - time (for timestamps)
+#   - sys (for input/output handling)
+
+# To run this project:
+# 1. Install Python 3 (if not installed)
+# 2. No packages need to be installed via pip.
+# 3. Simply run:
+#       python3 server.py
+#       python3 client.py 127.0.0.1 7777
