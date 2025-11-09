@@ -1,0 +1,121 @@
+
+
+
+```txt
+TEST PLAN - CN Assignment 1
+Author: Muhammad Hammad Butt (CMS 501399)
+GitHub Repo: CN-Assignment1-MuhammadHammadButt-501399
+
+------------------------------------------------------------
+TEST 1: Server and Client Connection
+------------------------------------------------------------
+Objective:
+Verify that the server accepts client connections successfully.
+Steps:
+1. Run `python3 server.py`.
+2. Run `python3 client.py 127.0.0.1 7777`.
+Expected Result:
+Client connects successfully and server prints "User joined".
+Actual Result:
+ Works correctly.
+
+Screenshot: 01_server_running.png
+
+------------------------------------------------------------
+TEST 2: Broadcast Message
+------------------------------------------------------------
+Objective:
+Verify that a message from one client is received by all others.
+Steps:
+1. Start two clients: Ali and Bilal.
+2. Ali sends message: "Hello everyone!"
+Expected Result:
+Bilal receives message from Ali.
+Actual Result:
+Works correctly.
+
+Screenshot: 03_broadcast_message.png
+
+------------------------------------------------------------
+TEST 3: Private Message
+------------------------------------------------------------
+Objective:
+Ensure private message delivery using "@username message" format.
+Steps:
+1. Ali sends "@Bilal hey how are you?"
+Expected Result:
+Bilal receives "[PRIVATE] Ali -> you: hey how are you?"
+Actual Result:
+Works correctly.
+
+Screenshot: 04_private_message.png
+
+------------------------------------------------------------
+TEST 4: Duplicate Username
+------------------------------------------------------------
+Objective:
+Check handling of duplicate usernames.
+Steps:
+1. Client A connects as "Ali".
+2. Another client tries to connect as "Ali".
+Expected Result:
+Second client gets "ERR|DUPLICATE_NAME" and is disconnected.
+Actual Result:
+ Works correctly.
+
+Screenshot: 05_duplicate_username.png
+
+------------------------------------------------------------
+TEST 5: List Users
+------------------------------------------------------------
+Objective:
+Check that `/list` command correctly returns connected users.
+Steps:
+1. Client sends `/list`.
+Expected Result:
+Server returns list of all connected usernames.
+Actual Result:
+ Works correctly.
+
+Screenshot: (Optional, same session)
+
+------------------------------------------------------------
+TEST 6: Leave Notification
+------------------------------------------------------------
+Objective:
+Ensure that leaving or disconnecting is broadcast to all users.
+Steps:
+1. One client sends `/quit` or closes window.
+Expected Result:
+Server broadcasts "<username> has left the chat" to others.
+Actual Result:
+Works correctly.
+
+Screenshot: 06_leave_notification.png
+
+------------------------------------------------------------
+TEST 7: Abrupt Disconnection (Network Failure)
+------------------------------------------------------------
+Objective:
+Check server stability when a client disconnects abruptly.
+Steps:
+1. Close client window without `/quit`.
+Expected Result:
+Server detects disconnection and removes client gracefully.
+Actual Result:
+Works correctly.
+
+Screenshot: (Optional)
+
+------------------------------------------------------------
+SUMMARY:
+All features and edge cases work as intended:
+- Multi-client communication 
+- Broadcast 
+- Private messaging 
+- Join/Leave notifications 
+- Duplicate username handling 
+- Error handling 
+- Server stability 
+
+All related screenshots are stored in the `screenshots/` folder.
