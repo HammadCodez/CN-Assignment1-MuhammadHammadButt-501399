@@ -1,7 +1,4 @@
-
-
-
-```txt
+```
 TEST PLAN - CN Assignment 1
 Author: Muhammad Hammad Butt (CMS 501399)
 GitHub Repo: CN-Assignment1-MuhammadHammadButt-501399
@@ -19,7 +16,7 @@ Client connects successfully and server prints "User joined".
 Actual Result:
  Works correctly.
 
-Screenshot: 01_server_running.png
+Screenshot: 01_server_running.png AND 02_clients_connection (given in screenshots folder)
 
 ------------------------------------------------------------
 TEST 2: Broadcast Message
@@ -27,14 +24,14 @@ TEST 2: Broadcast Message
 Objective:
 Verify that a message from one client is received by all others.
 Steps:
-1. Start two clients: Ali and Bilal.
-2. Ali sends message: "Hello everyone!"
+1. Start two clients: ahmed and Hammad.
+2. ahmed sends message: "Hello everyone!"
 Expected Result:
-Bilal receives message from Ali.
+Hammad receives message from Ali.
 Actual Result:
 Works correctly.
 
-Screenshot: 03_broadcast_message.png
+Screenshot: 03_broadcast_message.png (given in screenshots folder)
 
 ------------------------------------------------------------
 TEST 3: Private Message
@@ -42,13 +39,13 @@ TEST 3: Private Message
 Objective:
 Ensure private message delivery using "@username message" format.
 Steps:
-1. Ali sends "@Bilal hey how are you?"
+1. Hammad sends "@ahmed hi I am Hammad"
 Expected Result:
-Bilal receives "[PRIVATE] Ali -> you: hey how are you?"
+ahmed receives "[PRIVATE] ahmed -> you: hey how are you?"
 Actual Result:
 Works correctly.
 
-Screenshot: 04_private_message.png
+Screenshot: 04_private_message.png (given in screenshots folder)
 
 ------------------------------------------------------------
 TEST 4: Duplicate Username
@@ -56,14 +53,14 @@ TEST 4: Duplicate Username
 Objective:
 Check handling of duplicate usernames.
 Steps:
-1. Client A connects as "Ali".
-2. Another client tries to connect as "Ali".
+1. Client A connects as "Hammad".
+2. Another client tries to connect as "Hammad".
 Expected Result:
 Second client gets "ERR|DUPLICATE_NAME" and is disconnected.
 Actual Result:
  Works correctly.
 
-Screenshot: 05_duplicate_username.png
+Screenshot: 06_duplicate_username.png (given in screenshots folder)
 
 ------------------------------------------------------------
 TEST 5: List Users
@@ -77,7 +74,7 @@ Server returns list of all connected usernames.
 Actual Result:
  Works correctly.
 
-Screenshot: (Optional, same session)
+Screenshot: 05_list_users.png (given in screenshots folder)
 
 ------------------------------------------------------------
 TEST 6: Leave Notification
@@ -91,7 +88,7 @@ Server broadcasts "<username> has left the chat" to others.
 Actual Result:
 Works correctly.
 
-Screenshot: 06_leave_notification.png
+Screenshot: 07_leave_notification.png
 
 ------------------------------------------------------------
 TEST 7: Abrupt Disconnection (Network Failure)
@@ -105,7 +102,7 @@ Server detects disconnection and removes client gracefully.
 Actual Result:
 Works correctly.
 
-Screenshot: (Optional)
+Screenshot: 08_abrupt_network_or_other_quit (given in screenshots folder)
 
 ------------------------------------------------------------
 SUMMARY:
